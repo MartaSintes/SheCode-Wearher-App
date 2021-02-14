@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/56fd069d3f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>weather app</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-app">
+
+            <form class="search-form" id="search-form">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="search" placeholder="Enter location" class="form-control shadow-sm" autofocus="on"
+                            autocomplete="off" id="city-input" />
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-primary shadow-sm w-100">
+                            <i class="fas fa-search"></i>
+                        </button>
+
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-success w-100" id="current-location-button">
+                            current
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <h1 id="city">
+
+            </h1>
+            <ul>
+                <li id="date"></li>
+            </ul>
+
+            <ul>
+
+            </ul>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card border-muted bg-light text-center">
+
+                        <div class="card-body text-center">
+                            Max
+                            <div class="row text-center">
+                                <div class="col" id="max"></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-muted mb-3 rounded bg-muted text-center">
+                        <div class="card-body">
+                            <span class="temperature" id="temperature"> </span>ºC
+                            <div class="row">
+                                <div class="col">
+                                    <span class="weather-icon">
+                                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                                            alt="cloudy">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="cloudy" id="description">
+
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-muted  bg-light text-center">
+                        <div class="card-body text-center">
+                            Min
+                            <div class="row text-center">
+                                <div class="col" id="min"> </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6">
+                    <ul>
+                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li> Wind: <span id="wind"></span> Km/h</li>
+                    </ul>
+
+                </div>
+
+
+
+                <div class="week-weather">
+                    <div class="card border-muted bg-light">
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col">
+                                    Mon
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-sun"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            12º
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            3º
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    Thu
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-cloud-sun"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            11º
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            2º
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    Wed
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-cloud-rain"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            9º
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            1º
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    Thu
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-cloud-rain"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            11º
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            3º
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    Fri
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-cloud-sun-rain"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            10º
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            4º
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    Sat
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-cloud-sun-rain"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            9º
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            2º
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <script src="src/index.js"></script>
+</body>
+
+</html>

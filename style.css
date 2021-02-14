@@ -1,0 +1,47 @@
+body {
+  font: arial, sans-serif;
+}
+h1 {
+  color: #e5707e;
+  text-align: center;
+  margin-top: 20px;
+}
+ul {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+li {
+  display: block;
+  margin-left: 230px;
+  color: rgb(135, 135, 135);
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+.weather-app {
+  border: 2px solid #e6e6e6;
+  padding: 15px;
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+}
+.current-weather {
+  font-size: 30px;
+}
+
+.temperature a {
+  text-decoration: none;
+  margin: 25px;
+}
+.weather-seach-from {
+  margin-bottom: 40px auto;
+}
+.aditional-information {
+  margin-bottom: 55px;
+}
+.week-weather {
+  text-align: center;
+}
+
