@@ -19,6 +19,13 @@ li {
   font-size: 16px;
   font-weight: 100;
 }
+h2 {
+
+ text-align: center;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
 .weather-app {
   border: 2px solid #e6e6e6;
   padding: 15px;
