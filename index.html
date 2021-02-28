@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-3">
                         <button class="btn btn-success w-100" id="current-location-button">
-                            current
+                            <i class="fas fa-map-marker-alt"></i>
                         </button>
                     </div>
                 </div>
@@ -52,12 +52,9 @@
                 <div class="col">
                     <div class="card border-muted bg-light text-center">
 
-                        <div class="card-body text-center">
-                            Max
-                            <div class="row text-center">
-                                <div class="col" id="max"></div>
+                        <div class="card-body text-center">Max <span class="col" id="max"></span>ºC
 
-                            </div>
+                            
 
                         </div>
                     </div>
@@ -70,7 +67,10 @@
                                 <div class="col">
                                     <span class="weather-icon">
                                         <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                                            alt="cloudy">
+                                            alt="cloudy"
+                                            id="icon"
+                                            />
+                                            
                                     </span>
                                 </div>
                             </div>
@@ -87,145 +87,26 @@
                 </div>
                 <div class="col">
                     <div class="card border-muted  bg-light text-center">
-                        <div class="card-body text-center">
-                            Min
-                            <div class="row text-center">
-                                <div class="col" id="min"> </div>
+                        <div class="card-body text-center">Min <span class="col" id="min"> </span>ºC
                             </div>
 
-                        </div>
+                        
                     </div>
                 </div>
 
+               
+                <div class="humidity-information">Humidity: <span id="humidity"></span>%</div>
+                
+                <div class ="wind-information"> Wind: <span id="wind"></span> Km/h</div>
+                
+                       
+                
 
-                <div class="col-6">
-                    <ul>
-                        <li>Humidity: <span id="humidity"></span>%</li>
-                        <li> Wind: <span id="wind"></span> Km/h</li>
-                    </ul>
-
-                </div>
+                
 
 
 
-                <div class="week-weather">
-                    <div class="card border-muted bg-light">
-                        <div class="card-body">
-
-                            <div class="row">
-                                <div class="col">
-                                    Mon
-                                    <div class="row">
-                                        <div class="col">
-                                            <i class="fas fa-sun"></i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            12º
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            3º
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    Thu
-                                    <div class="row">
-                                        <div class="col">
-                                            <i class="fas fa-cloud-sun"></i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            11º
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            2º
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    Wed
-                                    <div class="row">
-                                        <div class="col">
-                                            <i class="fas fa-cloud-rain"></i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            9º
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            1º
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    Thu
-                                    <div class="row">
-                                        <div class="col">
-                                            <i class="fas fa-cloud-rain"></i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            11º
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            3º
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    Fri
-                                    <div class="row">
-                                        <div class="col">
-                                            <i class="fas fa-cloud-sun-rain"></i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            10º
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            4º
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    Sat
-                                    <div class="row">
-                                        <div class="col">
-                                            <i class="fas fa-cloud-sun-rain"></i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            9º
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            2º
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+               
 
             </div>
         </div>

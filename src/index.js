@@ -36,8 +36,9 @@ function weatherCondition(response) {
     response.data.main.temp_min
   );
   document.querySelector("#max").innerHTML = Math.round(
-    response.data.main.temp_max
+    response.data.main.temp_max 
   );
+  iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 
@@ -77,6 +78,7 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("New York");
+let iconElement = document.querySelector ("#icon");
 
 
 
