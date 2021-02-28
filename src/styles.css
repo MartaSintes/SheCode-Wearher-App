@@ -35,7 +35,7 @@ h2 {
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 .current-weather {
-  font-size: 30px;
+  font-size: 0px;
 }
 
 .temperature a {
